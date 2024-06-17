@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.mediaplayer.MediaPlayerController">
+   <center>
+      <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" BorderPane.alignment="BOTTOM_CENTER" />
+   </center>
+   <bottom>
+      <VBox prefHeight="158.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Slider fx:id="slider" onMousePressed="#sliderPressed" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnSelectMediaOnAction" text="Select Media" />
+                  <Button fx:id="btnPlay" mnemonicParsing="false" onMouseClicked="#btnPlay" text="PLAY" />
+                  <Button fx:id="btnStop" mnemonicParsing="false" onMouseClicked="#btnStop" text="STOP" />
+                  <Label fx:id="lblDuration" text="Duration" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
